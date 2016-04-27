@@ -1,0 +1,12 @@
+{
+  "name": "base64app",
+  "version": "0.1.0",
+  "description": "Front end application for base64 conversion",
+  "private": true,
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-coverage": "^0.5.5",
+    "karma-jasmine": "^0.3.8"
+  }
+}
