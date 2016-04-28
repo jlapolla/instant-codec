@@ -21,7 +21,7 @@ $(call helpdoc,$(d)clean)
 $(d)clean: $(addprefix $(d),$(addsuffix clean,$($(d)submodules)))
 
 .PHONY: $(d)test-base64app
-$(call helpdoc,$(d)test,Start Karma test runner to run tests on source files)
+$(call helpdoc,$(d)test-base64app)
 $(d)test-base64app: $(d)karma
 	$(if $(d),(cd $(d) && ./karma start src/base64app/config/karma.conf.js),./karma start src/base64app/config/karma.conf.js)
 
