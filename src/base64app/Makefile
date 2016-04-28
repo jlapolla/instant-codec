@@ -37,7 +37,7 @@ $(d)test/test-start.js: $(d)partials/test-start.js
 .PHONY: $(d)clean
 $(call helpdoc,$(d)clean,Delete build products)
 $(d)clean:
-	rm -rf $(d)dist/ $(d)test/
+	rm -rf $(d)dist/ $(d)test/ $(d)reports/
 endef
 $(eval $($(d)template))
 
