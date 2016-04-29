@@ -1,6 +1,9 @@
 # Source files must be concatenated in a specific order
 $(eval $(d)js :=)
+$(eval $(d)js += extendClass)
 $(eval $(d)js += getUndefined)
+$(eval $(d)js += hasOwnProperty)
+$(eval $(d)js += multiInheritClass)
 
 # Source files wrapped in "test" partials
 define $(d)template
