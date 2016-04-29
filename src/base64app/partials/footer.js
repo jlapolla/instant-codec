@@ -1,7 +1,9 @@
   }.call(inner, host));
 
   // Expose only public classes and functions on Base64App module
-  var expose = [];
+  var expose = [
+    'getUndefined',
+  ];
   (function(inner, arr) {
 
     for (var i = 0; i < arr.length; i++) {

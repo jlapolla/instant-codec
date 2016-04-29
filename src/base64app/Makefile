@@ -21,7 +21,7 @@ $(d)dist/base64app.js: $(addprefix $(d)js/,$(addsuffix .js,$($(d)js))) $(addpref
 $(call helpdoc,$(d)dist/base64app.min.js,Base64App module (minified))
 $(d)dist/base64app.min.js: $(d)dist/base64app.js $(d)partials/preamble.js
 	cat $(d)partials/preamble.js > $(d)dist/base64app.min.js
-	uglify -mc unsafe -- - < $(d)dist/base64app.js >> (d)dist/base64app.min.js
+	uglifyjs -mc unsafe -- - < $(d)dist/base64app.js >> $(d)dist/base64app.min.js
 
 .PHONY: $(d)all
 $(call helpdoc,$(d)all,Build main files)

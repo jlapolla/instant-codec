@@ -25,6 +25,16 @@ $(call helpdoc,$(d)test-base64app)
 $(d)test-base64app: $(d)karma
 	$(if $(d),(cd $(d) && ./karma start src/base64app/config/karma.conf.js),./karma start src/base64app/config/karma.conf.js)
 
+.PHONY: $(d)test-base64app-production
+$(call helpdoc,$(d)test-base64app-production)
+$(d)test-base64app-production: $(d)karma
+	$(if $(d),(cd $(d) && ./karma start src/base64app/config/karma-production.conf.js),./karma start src/base64app/config/karma-production.conf.js)
+
+.PHONY: $(d)test-base64app-minified
+$(call helpdoc,$(d)test-base64app-minified)
+$(d)test-base64app-minified: $(d)karma
+	$(if $(d),(cd $(d) && ./karma start src/base64app/config/karma-minified.conf.js),./karma start src/base64app/config/karma-minified.conf.js)
+
 $(d)karma: $(d)node_modules/karma/bin/karma
 	ln -sf node_modules/karma/bin/karma $(d)karma
 
