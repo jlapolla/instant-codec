@@ -59,7 +59,7 @@ $(d)node_modules/karma/bin/karma:
 .PHONY: $(d)lint
 $(call helpdoc,$(d)lint)
 $(d)lint:
-	jscs -x -r inline $(wildcard $(d)src/base64app/js/*) $(wildcard $(d)src/base64app/spec/*)
+	jscs -x -r inline $(addprefix $(d)src/base64app/,js/ spec/) $(addprefix $(d)src/angular-base64app/,services/ spec/)
 
 endef
 
