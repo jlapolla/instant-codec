@@ -37,4 +37,5 @@ $(eval $($(d)template))
 # Clear local variables
 $(eval $(d)submodules :=)
 $(eval $(d)subexports :=)
+$(eval $(d)template :=)
 
