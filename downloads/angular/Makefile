@@ -34,6 +34,10 @@ define $(d)template
 $(call helpdoc,$(d)clean)
 .PHONY: $(d)clean
 $(d)clean:
+
+$(call helpdoc,$(d)download-clean)
+.PHONY: $(d)download-clean
+$(d)download-clean:
 	rm -f $(d)angular*
 endef
 
