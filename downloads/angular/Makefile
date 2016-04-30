@@ -1,7 +1,6 @@
 # Angular file download template
+include download.mk
 define $(d)template
-
-$(eval include download.mk)
 
 $(d)$(1)-$(2)$(3):
 	$(call download,https://code.angularjs.org/$(2)/$(1)$(3),$(d)$(1)-$(2)$(3))
@@ -23,7 +22,6 @@ $(eval $(call $(d)template,angular-sanitize,$($(d)ver),.min.js))
 $(eval $(call $(d)template,angular-touch,$($(d)ver),.min.js))
 $(eval $(call $(d)template,angular-mocks,$($(d)ver),.js))
 $(eval $(call $(d)template,angular-scenario,$($(d)ver),.js))
-$(eval $(d)template :=)
 
 # Includes
 include helpdoc.mk
