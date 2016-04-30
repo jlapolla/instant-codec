@@ -40,6 +40,12 @@ $(d)karma: $(d)node_modules/karma/bin/karma
 
 $(d)node_modules/karma/bin/karma:
 	$(if $(d),(cd $(d) && npm install),npm install)
+
+.PHONY: $(d)lint
+$(call helpdoc,$(d)lint)
+$(d)lint:
+	jscs -x -r inline $(wildcard $(d)src/base64app/js/*) $(wildcard $(d)src/base64app/spec/*)
+
 endef
 
 # Compile template
