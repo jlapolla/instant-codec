@@ -11,9 +11,9 @@ describe('base64Block service', function() {
     'refWire',
     function(base64Block, refWire) {
 
-    block = base64Block();
-    wireFactory = refWire;
-  }]));
+      block = base64Block();
+      wireFactory = refWire;
+    }]));
 
   it('creates a block that syncs utf8, base64, and base64Stripped', function() {
 
@@ -40,7 +40,10 @@ describe('base64Block service', function() {
     var states = [
       {utf8: '', base64: '', stripped: ''},
       {utf8: '小飼弾', base64: '5bCP6aO85by+', stripped: '5bCP6aO85by+'},
-      {utf8: 'I ♥ base64', base64: 'SSDimaUgYmFzZTY0', stripped: 'SSDimaUgYmFzZTY0'},
+      {
+        utf8: 'I ♥ base64',
+        base64: 'SSDimaUgYmFzZTY0',
+        stripped: 'SSDimaUgYmFzZTY0'},
       {utf8: 'I ♥ U', base64: 'SSDimaUgVQ==', stripped: 'SSDimaUgVQ'},
     ];
 
@@ -55,7 +58,7 @@ describe('base64Block service', function() {
         expect(utf8.value()).toBe(st.utf8);
         expect(base64.value()).toBe(st.base64);
         expect(stripped.value()).toBe(st.stripped);
-      }
+      };
 
       // Set utf8
       clear();

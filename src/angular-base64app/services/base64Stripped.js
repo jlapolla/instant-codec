@@ -15,6 +15,7 @@ angularModule.constant('base64Stripped', (function() {
 
       arr.length = 5 - base64Stripped.length % 4;
     }
+
     return base64Stripped + arr.join('=');
   };
 
