@@ -2,8 +2,8 @@
 include download.mk
 define $(d)template
 
-$(d)$(2)-$(3)$(4):
-	$(call download,https://maxcdn.bootstrapcdn.com/bootstrap/$(3)/$(1)/$(2)$(4),$(d)$(2)-$(3)$(4))
+$(d)$(2)$(4):
+	$(call download,https://maxcdn.bootstrapcdn.com/bootstrap/$(3)/$(1)/$(2)$(4),$(d)$(2)$(4))
 endef
 
 # File downloads

@@ -71,8 +71,8 @@ define $(d)template
 $(2): $(1)
 	mkdir -p $(dir $(2)) && cp $(1) $(2)
 endef
-$(eval $(call $(d)template,$(d)downloads/angular/angular-1.5.5.min.js,$(d)src/angular-base64app/downloads/angular.js))
-$(eval $(call $(d)template,$(d)downloads/angular/angular-mocks-1.5.5.js,$(d)src/angular-base64app/downloads/angular-mocks.js))
+$(eval $(call $(d)template,$(d)downloads/angular/angular.min.js,$(d)src/angular-base64app/downloads/angular.js))
+$(eval $(call $(d)template,$(d)downloads/angular/angular-mocks.js,$(d)src/angular-base64app/downloads/angular-mocks.js))
 $(eval $(call $(d)template,$(d)downloads/angular-utf8-base64/angular-utf8-base64.min.js,$(d)src/angular-base64app/downloads/angular-utf8-base64.js))
 $(eval $(call $(d)template,$(d)downloads/live-blocks/live-blocks.min.js,$(d)src/angular-base64app/downloads/live-blocks.js))
 

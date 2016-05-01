@@ -2,8 +2,8 @@
 include download.mk
 define $(d)template
 
-$(d)$(1)-$(2)$(3):
-	$(call download,https://code.angularjs.org/$(2)/$(1)$(3),$(d)$(1)-$(2)$(3))
+$(d)$(1)$(3):
+	$(call download,https://code.angularjs.org/$(2)/$(1)$(3),$(d)$(1)$(3))
 endef
 
 # File downloads

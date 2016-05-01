@@ -18,6 +18,10 @@ include helpdoc.mk
 # Main template
 define $(d)template
 
+$(call helpdoc,$(d)live-blocks.js)
+$(d)live-blocks.js: $(d)src/dist/live-blocks.js
+	cp $(d)src/dist/live-blocks.js $(d)live-blocks.js
+
 $(call helpdoc,$(d)live-blocks.min.js)
 $(d)live-blocks.min.js: $(d)src/dist/live-blocks.min.js
 	cp $(d)src/dist/live-blocks.min.js $(d)live-blocks.min.js
