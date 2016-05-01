@@ -76,6 +76,13 @@ $(eval $(call $(d)template,$(d)downloads/angular/angular-mocks.js,$(d)src/angula
 $(eval $(call $(d)template,$(d)downloads/angular-utf8-base64/angular-utf8-base64.min.js,$(d)src/angular-base64app/downloads/angular-utf8-base64.js))
 $(eval $(call $(d)template,$(d)downloads/live-blocks/live-blocks.min.js,$(d)src/angular-base64app/downloads/live-blocks.js))
 
+$(eval $(call $(d)template,$(d)downloads/angular/angular.min.js,$(d)html/downloads/angular.min.js))
+$(eval $(call $(d)template,$(d)src/angular-base64app/dist/angular-base64app.js,$(d)html/downloads/angular-base64app.js))
+$(eval $(call $(d)template,$(d)downloads/angular-utf8-base64/angular-utf8-base64.js,$(d)html/downloads/angular-utf8-base64.js))
+$(eval $(call $(d)template,$(d)src/base64app/dist/base64app.js,$(d)html/downloads/base64app.js))
+$(eval $(call $(d)template,$(d)downloads/bootstrap/bootstrap.min.css,$(d)html/downloads/bootstrap.min.css))
+$(eval $(call $(d)template,$(d)downloads/live-blocks/live-blocks.js,$(d)html/downloads/live-blocks.js))
+
 # Default to help
 .DEFAULT_GOAL := help
 
