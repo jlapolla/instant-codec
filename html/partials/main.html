@@ -1,2 +1,6 @@
-<p>Main</p>
+<div ng-controller="base64ConversionController">
+  <textarea ng-model="scope.utf8"></textarea>
+  <textarea ng-model="scope.base64"></textarea>
+  <p ng-if="!scope.isGood()">{{scope.error().message}}</p>
+</div>
 
