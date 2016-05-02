@@ -3,23 +3,23 @@ include helpdoc.mk
 include watch.mk
 
 define $(d)template
-$(call helpdoc,$(d)dist/single-page.html)
-$(d)dist/single-page.html: $(addprefix $(d)partials/,header.html main.html middle.html footer.html) $(addprefix $(d)downloads/,angular.min.js angular-base64app.js angular-utf8-base64.js base64app.js bootstrap.min.css live-blocks.js)
-	mkdir -p $(d)dist/
-	cat $(d)partials/header.html > $(d)dist/single-page.html
-	printf '%s\n' '<style>' >> $(d)dist/single-page.html
-	cat $(d)downloads/bootstrap.min.css >> $(d)dist/single-page.html
-	printf '%s\n' '</style>' >> $(d)dist/single-page.html
-	cat $(d)partials/middle.html $(d)partials/main.html >> $(d)dist/single-page.html
-	printf '%s\n' '<script>' >> $(d)dist/single-page.html
-	cat $(addprefix $(d)downloads/,live-blocks.js base64app.js angular.min.js angular-base64app.js angular-utf8-base64.js) >> $(d)dist/single-page.html
-	printf '%s\n' '</script>' >> $(d)dist/single-page.html
-	cat $(d)partials/footer.html >> $(d)dist/single-page.html
+$(d)dist/index.html: $(addprefix $(d)partials/,header.html head-content.html main.html middle.html footer.html foot-content.html)
+	mkdir -p $(d)dist/ && cat $(addprefix $(d)partials/,header.html head-content.html main.html middle.html footer.html foot-content.html) > $(d)dist/index.html
+
+$(d)dist/unminified.html: $(addprefix $(d)partials/,header.html head-content.html main.html middle.html footer.html foot-content-unminified.html)
+	mkdir -p $(d)dist/ && cat $(addprefix $(d)partials/,header.html head-content.html main.html middle.html footer.html foot-content-unminified.html) > $(d)dist/unminified.html
+
+.PHONY: $(d)all
+$(call helpdoc,$(d)all)
+$(d)all: $(d)dist/index.html $(d)dist/unminified.html \
+$(addprefix $(d)dist/js/,live-blocks.js live-blocks.min.js base64app.js base64app.min.js angular.min.js angular-base64app.js angular-base64app.min.js angular-utf8-base64.js angular-utf8-base64.min.js) \
+$(addprefix $(d)dist/css/,bootstrap.min.css) \
+$(addprefix $(d)dist/fonts/glyphicons-halflings-regular,.eot .svg .ttf .woff .woff2)
 
 .PHONY: $(d)clean
 $(call helpdoc,$(d)clean)
 $(d)clean:
-	rm -rf $(d)dist/ $(d)downloads/
+	rm -rf $(d)dist/
 endef
 $(eval $($(d)template))
 

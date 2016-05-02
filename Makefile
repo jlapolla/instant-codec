@@ -71,17 +71,29 @@ define $(d)template
 $(2): $(1)
 	mkdir -p $(dir $(2)) && cp $(1) $(2)
 endef
+
+# angular-base64app testing
 $(eval $(call $(d)template,$(d)downloads/angular/angular.min.js,$(d)src/angular-base64app/downloads/angular.js))
 $(eval $(call $(d)template,$(d)downloads/angular/angular-mocks.js,$(d)src/angular-base64app/downloads/angular-mocks.js))
 $(eval $(call $(d)template,$(d)downloads/angular-utf8-base64/angular-utf8-base64.min.js,$(d)src/angular-base64app/downloads/angular-utf8-base64.js))
 $(eval $(call $(d)template,$(d)downloads/live-blocks/live-blocks.min.js,$(d)src/angular-base64app/downloads/live-blocks.js))
 
-$(eval $(call $(d)template,$(d)downloads/angular/angular.min.js,$(d)html/downloads/angular.min.js))
-$(eval $(call $(d)template,$(d)src/angular-base64app/dist/angular-base64app.js,$(d)html/downloads/angular-base64app.js))
-$(eval $(call $(d)template,$(d)downloads/angular-utf8-base64/angular-utf8-base64.js,$(d)html/downloads/angular-utf8-base64.js))
-$(eval $(call $(d)template,$(d)src/base64app/dist/base64app.js,$(d)html/downloads/base64app.js))
-$(eval $(call $(d)template,$(d)downloads/bootstrap/bootstrap.min.css,$(d)html/downloads/bootstrap.min.css))
-$(eval $(call $(d)template,$(d)downloads/live-blocks/live-blocks.js,$(d)html/downloads/live-blocks.js))
+# html/dist dependencies
+$(eval $(call $(d)template,$(d)downloads/angular/angular.min.js,$(d)html/dist/js/angular.min.js))
+$(eval $(call $(d)template,$(d)src/angular-base64app/dist/angular-base64app.js,$(d)html/dist/js/angular-base64app.js))
+$(eval $(call $(d)template,$(d)src/angular-base64app/dist/angular-base64app.min.js,$(d)html/dist/js/angular-base64app.min.js))
+$(eval $(call $(d)template,$(d)downloads/angular-utf8-base64/angular-utf8-base64.js,$(d)html/dist/js/angular-utf8-base64.js))
+$(eval $(call $(d)template,$(d)downloads/angular-utf8-base64/angular-utf8-base64.min.js,$(d)html/dist/js/angular-utf8-base64.min.js))
+$(eval $(call $(d)template,$(d)src/base64app/dist/base64app.js,$(d)html/dist/js/base64app.js))
+$(eval $(call $(d)template,$(d)src/base64app/dist/base64app.min.js,$(d)html/dist/js/base64app.min.js))
+$(eval $(call $(d)template,$(d)downloads/live-blocks/live-blocks.js,$(d)html/dist/js/live-blocks.js))
+$(eval $(call $(d)template,$(d)downloads/live-blocks/live-blocks.min.js,$(d)html/dist/js/live-blocks.min.js))
+$(eval $(call $(d)template,$(d)downloads/bootstrap/bootstrap.min.css,$(d)html/dist/css/bootstrap.min.css))
+$(eval $(call $(d)template,$(d)downloads/glyphicons/glyphicons-halflings-regular.eot,$(d)html/dist/fonts/glyphicons-halflings-regular.eot))
+$(eval $(call $(d)template,$(d)downloads/glyphicons/glyphicons-halflings-regular.svg,$(d)html/dist/fonts/glyphicons-halflings-regular.svg))
+$(eval $(call $(d)template,$(d)downloads/glyphicons/glyphicons-halflings-regular.ttf,$(d)html/dist/fonts/glyphicons-halflings-regular.ttf))
+$(eval $(call $(d)template,$(d)downloads/glyphicons/glyphicons-halflings-regular.woff,$(d)html/dist/fonts/glyphicons-halflings-regular.woff))
+$(eval $(call $(d)template,$(d)downloads/glyphicons/glyphicons-halflings-regular.woff2,$(d)html/dist/fonts/glyphicons-halflings-regular.woff2))
 
 # Default to help
 .DEFAULT_GOAL := help
