@@ -25,14 +25,14 @@
       block.connect('base64', wire.base64);
       block.connect('base64Stripped', wire.base64Stripped);
 
-      // Set initial value
-      wire.utf8.value('');
-
       // Bind wires to $scope
       for (var name in wire) {
 
         bind(wire[name], $scope, name);
       }
+
+      // Set initial value
+      wire.utf8.value('Enter text here!');
 
       // Bound functions on $scope
       $scope.isGood = this.isGood.bind(this);

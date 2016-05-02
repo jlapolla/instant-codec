@@ -1,6 +1,39 @@
 <div ng-controller="base64ConversionController">
-  <textarea ng-model="scope.utf8"></textarea>
-  <textarea ng-model="scope.base64"></textarea>
-  <p ng-if="!scope.isGood()">{{scope.error().message}}</p>
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Instant Base64 Converter</h1>
+          <p>Convert between text and base64 instantly!</p>
+          <p><a class="btn btn-primary btn-lg" href="https://github.com/jlapolla/instant-codec" title="View this project on Github!">Github</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1>Text</h1>
+        <p class="text-success" ng-if="scope.isGood()"><span class="glyphicon glyphicon-ok-circle"></span> No errors!</p>
+        <p class="text-danger" ng-if="!scope.isGood()"><span class="glyphicon glyphicon-remove-circle"></span> Conversion error!</p>
+        <div class="form-group" ng-class="{'has-error': !scope.isGood()}">
+          <textarea ng-model="scope.utf8" class="form-control" style="height:128px;resize:none"></textarea>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <h1>Base64</h1>
+        <p class="text-success" ng-if="scope.isGood()"><span class="glyphicon glyphicon-ok-circle"></span> No errors!</p>
+        <p class="text-danger" ng-if="!scope.isGood()"><span class="glyphicon glyphicon-remove-circle"></span> Conversion error!</p>
+        <div class="form-group" ng-class="{'has-error': !scope.isGood()}">
+          <textarea ng-model="scope.base64" class="form-control" style="height:128px;resize:none"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="alert alert-danger" ng-if="!scope.isGood()"><strong>Error!</strong><br>{{scope.error().message}}</div>
+      </div>
+    </div>
+  </div>
 </div>
 
