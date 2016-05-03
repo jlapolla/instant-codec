@@ -19,7 +19,7 @@ module.exports = function(config) {
       'downloads/angular.js',
       'downloads/angular-mocks.js',
       'downloads/angular-utf8-base64.js',
-      'dist/angular-base64app.js',
+      'dist/angular-instant-codec.js',
       'spec/**/*.js',
     ],
 

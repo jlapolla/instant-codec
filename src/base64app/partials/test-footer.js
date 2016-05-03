@@ -1,2 +1,2 @@
-}.call(this.Base64App, this));
+}.call(this.InstantCodec, this));
 

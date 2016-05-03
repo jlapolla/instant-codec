@@ -1,6 +1,6 @@
   }.call(inner, host));
 
-  // Expose only public classes and functions on Base64App module
+  // Expose only public classes and functions on InstantCodec module
   var expose = [
     'getUndefined',
   ];
@@ -11,5 +11,5 @@
       this[arr[i]] = inner[arr[i]];
     }
   }.call(this, inner, expose));
-}.call(this.Base64App, this));
+}.call(this.InstantCodec, this));
 

@@ -17,18 +17,18 @@ include helpdoc.mk
 include watch.mk
 
 define $(d)template
-$(call helpdoc,$(d)dist/base64app.js,Base64App module)
-$(d)dist/base64app.js: $(addprefix $(d)js/,$(addsuffix .js,$($(d)js))) $(addprefix $(d)partials/,$(addsuffix .js,header footer preamble))
-	mkdir -p $(d)dist/ && cat $(d)partials/preamble.js $(d)partials/header.js $(addprefix $(d)js/,$(addsuffix .js,$($(d)js))) $(d)partials/footer.js > $(d)dist/base64app.js
+$(call helpdoc,$(d)dist/instant-codec.js,InstantCodec module)
+$(d)dist/instant-codec.js: $(addprefix $(d)js/,$(addsuffix .js,$($(d)js))) $(addprefix $(d)partials/,$(addsuffix .js,header footer preamble))
+	mkdir -p $(d)dist/ && cat $(d)partials/preamble.js $(d)partials/header.js $(addprefix $(d)js/,$(addsuffix .js,$($(d)js))) $(d)partials/footer.js > $(d)dist/instant-codec.js
 
-$(call helpdoc,$(d)dist/base64app.min.js,Base64App module (minified))
-$(d)dist/base64app.min.js: $(d)dist/base64app.js $(d)partials/preamble.js
-	cat $(d)partials/preamble.js > $(d)dist/base64app.min.js
-	uglifyjs -mc unsafe -- - < $(d)dist/base64app.js >> $(d)dist/base64app.min.js
+$(call helpdoc,$(d)dist/instant-codec.min.js,InstantCodec module (minified))
+$(d)dist/instant-codec.min.js: $(d)dist/instant-codec.js $(d)partials/preamble.js
+	cat $(d)partials/preamble.js > $(d)dist/instant-codec.min.js
+	uglifyjs -mc unsafe -- - < $(d)dist/instant-codec.js >> $(d)dist/instant-codec.min.js
 
 .PHONY: $(d)all
 $(call helpdoc,$(d)all,Build main files)
-$(d)all: $(addprefix $(d)dist/,$(addsuffix .js,base64app base64app.min))
+$(d)all: $(addprefix $(d)dist/,$(addsuffix .js,instant-codec instant-codec.min))
 
 .PHONY: $(d)test-deps
 $(call helpdoc,$(d)test-deps,Build files needed for testing)

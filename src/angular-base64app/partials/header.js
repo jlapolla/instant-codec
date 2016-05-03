@@ -2,5 +2,5 @@
 
 (function() {
 
-  var angularModule = angular.module('base64app', ['ab-base64']);
+  var angularModule = angular.module('instant-codec', ['ab-base64']);
 

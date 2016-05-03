@@ -22,18 +22,18 @@ include helpdoc.mk
 include watch.mk
 
 define $(d)template
-$(call helpdoc,$(d)dist/angular-base64app.js,Base64App Angular module)
-$(d)dist/angular-base64app.js: $(addprefix $(d),$(addsuffix .js,$($(d)all))) $(addprefix $(d)partials/,$(addsuffix .js,header footer preamble))
-	mkdir -p $(d)dist/ && cat $(d)partials/preamble.js $(d)partials/header.js $(addprefix $(d),$(addsuffix .js,$($(d)all))) $(d)partials/footer.js > $(d)dist/angular-base64app.js
+$(call helpdoc,$(d)dist/angular-instant-codec.js,InstantCodec Angular module)
+$(d)dist/angular-instant-codec.js: $(addprefix $(d),$(addsuffix .js,$($(d)all))) $(addprefix $(d)partials/,$(addsuffix .js,header footer preamble))
+	mkdir -p $(d)dist/ && cat $(d)partials/preamble.js $(d)partials/header.js $(addprefix $(d),$(addsuffix .js,$($(d)all))) $(d)partials/footer.js > $(d)dist/angular-instant-codec.js
 
-$(call helpdoc,$(d)dist/angular-base64app.min.js,Base64App Angular module (minified))
-$(d)dist/angular-base64app.min.js: $(d)dist/angular-base64app.js $(d)partials/preamble.js
-	cat $(d)partials/preamble.js > $(d)dist/angular-base64app.min.js
-	uglifyjs -mc unsafe -- - < $(d)dist/angular-base64app.js >> $(d)dist/angular-base64app.min.js
+$(call helpdoc,$(d)dist/angular-instant-codec.min.js,InstantCodec Angular module (minified))
+$(d)dist/angular-instant-codec.min.js: $(d)dist/angular-instant-codec.js $(d)partials/preamble.js
+	cat $(d)partials/preamble.js > $(d)dist/angular-instant-codec.min.js
+	uglifyjs -mc unsafe -- - < $(d)dist/angular-instant-codec.js >> $(d)dist/angular-instant-codec.min.js
 
 .PHONY: $(d)all
 $(call helpdoc,$(d)all,Build main files)
-$(d)all: $(addprefix $(d)dist/,$(addsuffix .js,angular-base64app angular-base64app.min))
+$(d)all: $(addprefix $(d)dist/,$(addsuffix .js,angular-instant-codec angular-instant-codec.min))
 
 .PHONY: $(d)test-deps
 $(call helpdoc,$(d)test-deps,Build files needed for testing)

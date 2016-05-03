@@ -2,7 +2,7 @@
 
 describe('bindWire service', function() {
 
-  beforeEach(module('base64app'));
+  beforeEach(module('instant-codec'));
 
   var bind;
   var wireFactory;

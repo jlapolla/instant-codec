@@ -2,7 +2,7 @@
 
 describe('multiInheritClass function', function() {
 
-  var module = Base64App;
+  var module = InstantCodec;
 
   // Skip test if multiInheritClass is not exposed
   if (!module.multiInheritClass) {

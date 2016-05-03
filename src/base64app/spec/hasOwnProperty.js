@@ -2,7 +2,7 @@
 
 describe('hasOwnProperty function', function() {
 
-  var module = Base64App;
+  var module = InstantCodec;
 
   // Skip test if hasOwnProperty is not exposed
   if (!{}.hasOwnProperty.call(module, 'hasOwnProperty')) {

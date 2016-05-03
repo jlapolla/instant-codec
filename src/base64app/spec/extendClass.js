@@ -2,7 +2,7 @@
 
 describe('extendClass function', function() {
 
-  var module = Base64App;
+  var module = InstantCodec;
 
   // Skip test if extendClass is not exposed
   if (!module.extendClass) {

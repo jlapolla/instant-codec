@@ -2,7 +2,7 @@
 
 describe('refWire service', function() {
 
-  beforeEach(module('base64app'));
+  beforeEach(module('instant-codec'));
 
   var refWire;
   beforeEach(inject(['refWire', function(refWireInjected) {

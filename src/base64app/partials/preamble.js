@@ -1,5 +1,5 @@
 /**
- * Base64App
+ * Instant Codec
  * https://github.com/jlapolla/live-blocks-sample-base64
  *
  * Copyright (c) 2016 Justin LaPolla

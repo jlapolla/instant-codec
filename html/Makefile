@@ -12,7 +12,7 @@ $(d)dist/unminified.html: $(addprefix $(d)partials/,header.html head-content.htm
 .PHONY: $(d)all
 $(call helpdoc,$(d)all)
 $(d)all: $(d)dist/index.html $(d)dist/unminified.html \
-$(addprefix $(d)dist/js/,live-blocks.js live-blocks.min.js base64app.js base64app.min.js angular.min.js angular-base64app.js angular-base64app.min.js angular-utf8-base64.js angular-utf8-base64.min.js) \
+$(addprefix $(d)dist/js/,live-blocks.js live-blocks.min.js instant-codec.js instant-codec.min.js angular.min.js angular-instant-codec.js angular-instant-codec.min.js angular-utf8-base64.js angular-utf8-base64.min.js) \
 $(addprefix $(d)dist/css/,bootstrap.min.css) \
 $(addprefix $(d)dist/fonts/glyphicons-halflings-regular,.eot .svg .ttf .woff .woff2)
 

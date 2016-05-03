@@ -1,6 +1,6 @@
 'use strict';
 
-this.Base64App = {};
+this.InstantCodec = {};
 (function(host) {
 
   // Collect all classes and functions on inner

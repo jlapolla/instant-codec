@@ -2,7 +2,7 @@
 
 describe('base64Stripped service', function() {
 
-  beforeEach(module('base64app'));
+  beforeEach(module('instant-codec'));
 
   var codec;
   beforeEach(inject(['base64Stripped', function(base64Stripped) {

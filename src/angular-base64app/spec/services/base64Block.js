@@ -2,7 +2,7 @@
 
 describe('base64Block service', function() {
 
-  beforeEach(module('base64app'));
+  beforeEach(module('instant-codec'));
 
   var block;
   var wireFactory;

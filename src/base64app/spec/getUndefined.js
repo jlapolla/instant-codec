@@ -2,7 +2,7 @@
 
 describe('getUndefined function', function() {
 
-  var module = Base64App;
+  var module = InstantCodec;
 
   // Skip test if getUndefined is not exposed
   if (!module.getUndefined) {
