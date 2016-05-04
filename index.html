@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="instant-codec">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Base64 Converter</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<div ng-controller="base64ConversionController">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Instant Base64 Converter</h1>
+          <p>Convert between text and base64 instantly!</p>
+          <p><a class="btn btn-primary btn-lg" href="https://github.com/jlapolla/instant-codec" title="View this project on Github!">Github</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1>Text</h1>
+        <p class="text-success" ng-if="scope.isGood()"><span class="glyphicon glyphicon-ok-circle"></span> No errors!</p>
+        <p class="text-danger" ng-if="!scope.isGood()"><span class="glyphicon glyphicon-remove-circle"></span> Conversion error!</p>
+        <div class="form-group" ng-class="{'has-error': !scope.isGood()}">
+          <textarea ng-model="scope.utf8" class="form-control" style="height:128px;resize:none"></textarea>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <h1>Base64</h1>
+        <p class="text-success" ng-if="scope.isGood()"><span class="glyphicon glyphicon-ok-circle"></span> No errors!</p>
+        <p class="text-danger" ng-if="!scope.isGood()"><span class="glyphicon glyphicon-remove-circle"></span> Conversion error!</p>
+        <div class="form-group" ng-class="{'has-error': !scope.isGood()}">
+          <textarea ng-model="scope.base64" class="form-control" style="height:128px;resize:none"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="alert alert-danger" ng-if="!scope.isGood()"><strong>Error!</strong><br>{{scope.error().message}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </head>
+  <body>
+
+  </body>
+</html>
+
+<script src="js/live-blocks.min.js"></script>
+<script src="js/instant-codec.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-instant-codec.min.js"></script>
+<script src="js/angular-utf8-base64.min.js"></script>
+
