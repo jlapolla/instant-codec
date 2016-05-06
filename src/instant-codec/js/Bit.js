@@ -12,13 +12,13 @@
  * ## Functions
  *
  * - and: Bit × Bit --> Bit
- * - booleanValue: Bit --> BOOLEAN
- * - equalTo: Bit × Bit --> BOOLEAN
- * - not: Bit --> Bit
- * - numericValue: Bit --> INTEGER
  * - or: Bit × Bit --> Bit
+ * - not: Bit --> Bit
+ * - booleanValue: Bit --> BOOLEAN
+ * - numericValue: Bit --> INTEGER
+ * - equalTo: Bit × Bit --> BOOLEAN
  * - toString: Bit --> STRING
- * - Bit: INTEGER --> Bit
+ *
  */
 
 this.Bit = (function() {
@@ -37,41 +37,6 @@ this.Bit = (function() {
 
   Bit.prototype = {};
   var P = Bit.prototype;
-
-  P.numericValue = function() {
-
-    if (this.booleanValue()) {
-
-      return 1;
-    }
-    else {
-
-      return 0;
-    }
-  };
-
-  P.booleanValue = function() {
-
-    return this._booleanValue;
-  };
-
-  P.equalTo = function(other) {
-
-    return other instanceof Bit
-      && other.booleanValue() === this.booleanValue();
-  };
-
-  P.toString = function() {
-
-    if (this.booleanValue()) {
-
-      return '1';
-    }
-    else {
-
-      return '0';
-    }
-  };
 
   P.and = function(other) {
 
@@ -106,6 +71,41 @@ this.Bit = (function() {
     else {
 
       return new Bit(1);
+    }
+  };
+
+  P.booleanValue = function() {
+
+    return this._booleanValue;
+  };
+
+  P.numericValue = function() {
+
+    if (this.booleanValue()) {
+
+      return 1;
+    }
+    else {
+
+      return 0;
+    }
+  };
+
+  P.equalTo = function(other) {
+
+    return other instanceof Bit
+      && other.booleanValue() === this.booleanValue();
+  };
+
+  P.toString = function() {
+
+    if (this.booleanValue()) {
+
+      return '1';
+    }
+    else {
+
+      return '0';
     }
   };
 
