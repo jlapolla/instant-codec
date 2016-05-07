@@ -20,34 +20,34 @@ $(d)serve:
 $(call helpdoc,$(d)clean)
 $(d)clean: $(addprefix $(d),$(addsuffix clean,$($(d)submodules)))
 
-.PHONY: $(d)test-instant-codec
-$(call helpdoc,$(d)test-instant-codec)
-$(d)test-instant-codec: $(d)karma $(d)src/instant-codec/test-deps
+.PHONY: $(d)src/instant-codec/test
+$(call helpdoc,$(d)src/instant-codec/test)
+$(d)src/instant-codec/test: $(d)karma $(d)src/instant-codec/test-deps
 	$(if $(d),(cd $(d) && ./karma start src/instant-codec/config/karma.conf.js),./karma start src/instant-codec/config/karma.conf.js)
 
-.PHONY: $(d)test-instant-codec-production
-$(call helpdoc,$(d)test-instant-codec-production)
-$(d)test-instant-codec-production: $(d)karma $(d)src/instant-codec/dist/instant-codec.js $(d)src/instant-codec/test-deps
+.PHONY: $(d)src/instant-codec/test-production
+$(call helpdoc,$(d)src/instant-codec/test-production)
+$(d)src/instant-codec/test-production: $(d)karma $(d)src/instant-codec/dist/instant-codec.js $(d)src/instant-codec/test-deps
 	$(if $(d),(cd $(d) && ./karma start src/instant-codec/config/karma-production.conf.js),./karma start src/instant-codec/config/karma-production.conf.js)
 
-.PHONY: $(d)test-instant-codec-minified
-$(call helpdoc,$(d)test-instant-codec-minified)
-$(d)test-instant-codec-minified: $(d)karma $(d)src/instant-codec/dist/instant-codec.min.js $(d)src/instant-codec/test-deps
+.PHONY: $(d)src/instant-codec/test-minified
+$(call helpdoc,$(d)src/instant-codec/test-minified)
+$(d)src/instant-codec/test-minified: $(d)karma $(d)src/instant-codec/dist/instant-codec.min.js $(d)src/instant-codec/test-deps
 	$(if $(d),(cd $(d) && ./karma start src/instant-codec/config/karma-minified.conf.js),./karma start src/instant-codec/config/karma-minified.conf.js)
 
-.PHONY: $(d)test-angular-instant-codec
-$(call helpdoc,$(d)test-angular-instant-codec)
-$(d)test-angular-instant-codec: $(d)karma $(d)src/angular-instant-codec/test-deps
+.PHONY: $(d)src/angular-instant-codec/test
+$(call helpdoc,$(d)src/angular-instant-codec/test)
+$(d)src/angular-instant-codec/test: $(d)karma $(d)src/angular-instant-codec/test-deps
 	$(if $(d),(cd $(d) && ./karma start src/angular-instant-codec/config/karma.conf.js),./karma start src/angular-instant-codec/config/karma.conf.js)
 
-.PHONY: $(d)test-angular-instant-codec-production
-$(call helpdoc,$(d)test-angular-instant-codec-production)
-$(d)test-angular-instant-codec-production: $(d)karma $(d)src/angular-instant-codec/dist/angular-instant-codec.js $(d)src/angular-instant-codec/test-deps
+.PHONY: $(d)src/angular-instant-codec/test-production
+$(call helpdoc,$(d)src/angular-instant-codec/test-production)
+$(d)src/angular-instant-codec/test-production: $(d)karma $(d)src/angular-instant-codec/dist/angular-instant-codec.js $(d)src/angular-instant-codec/test-deps
 	$(if $(d),(cd $(d) && ./karma start src/angular-instant-codec/config/karma-production.conf.js),./karma start src/angular-instant-codec/config/karma-production.conf.js)
 
-.PHONY: $(d)test-angular-instant-codec-minified
-$(call helpdoc,$(d)test-angular-instant-codec-minified)
-$(d)test-angular-instant-codec-minified: $(d)karma $(d)src/angular-instant-codec/dist/angular-instant-codec.min.js $(d)src/angular-instant-codec/test-deps
+.PHONY: $(d)src/angular-instant-codec/test-minified
+$(call helpdoc,$(d)src/angular-instant-codec/test-minified)
+$(d)src/angular-instant-codec/test-minified: $(d)karma $(d)src/angular-instant-codec/dist/angular-instant-codec.min.js $(d)src/angular-instant-codec/test-deps
 	$(if $(d),(cd $(d) && ./karma start src/angular-instant-codec/config/karma-minified.conf.js),./karma start src/angular-instant-codec/config/karma-minified.conf.js)
 
 $(d)karma: $(d)node_modules/karma/bin/karma
