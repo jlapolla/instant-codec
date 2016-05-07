@@ -13,12 +13,12 @@
  *
  * - and: Bit × Bit --> Bit
  * - or: Bit × Bit --> Bit
+ * - xor: Bit × Bit --> Bit
  * - not: Bit --> Bit
  * - booleanValue: Bit --> BOOLEAN
  * - numericValue: Bit --> INTEGER
  * - equalTo: Bit × Bit --> BOOLEAN
  * - toString: Bit --> STRING
- *
  */
 
 this.Bit = (function() {
@@ -59,6 +59,18 @@ this.Bit = (function() {
     else {
 
       return new Bit(0);
+    }
+  };
+
+  P.xor = function(other) {
+
+    if (this.booleanValue() === other.booleanValue()) {
+
+      return new Bit(0);
+    }
+    else {
+
+      return new Bit(1);
     }
   };
 
