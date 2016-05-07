@@ -4,6 +4,7 @@ $(eval $(d)js += extendClass)
 $(eval $(d)js += getUndefined)
 $(eval $(d)js += hasOwnProperty)
 $(eval $(d)js += multiInheritClass)
+$(eval $(d)js += Bit)
 
 # Source files wrapped in "test" partials
 define $(d)template

@@ -20,6 +20,7 @@ module.exports = function(config) {
       'test/getUndefined.js',
       'test/hasOwnProperty.js',
       'test/multiInheritClass.js',
+      'test/Bit.js',
       'spec/*.js',
     ],
 
