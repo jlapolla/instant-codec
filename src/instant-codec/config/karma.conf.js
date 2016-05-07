@@ -21,6 +21,7 @@ module.exports = function(config) {
       'test/hasOwnProperty.js',
       'test/multiInheritClass.js',
       'test/Bit.js',
+      'test/Byte.js',
       'spec/*.js',
     ],
 

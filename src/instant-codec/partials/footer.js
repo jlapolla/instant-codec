@@ -5,6 +5,7 @@
     'getUndefined',
     'hasOwnProperty',
     'Bit',
+    'Byte',
   ];
   (function(inner, arr) {
 
