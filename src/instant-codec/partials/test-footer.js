@@ -1,2 +1,2 @@
-}.call(this.InstantCodec, this));
+}.call(this.TestModule, this));
 

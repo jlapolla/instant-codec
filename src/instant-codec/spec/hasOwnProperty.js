@@ -2,10 +2,8 @@
 
 describe('hasOwnProperty function', function() {
 
-  var module = InstantCodec;
-
   // Skip test if hasOwnProperty is not exposed
-  if (!{}.hasOwnProperty.call(module, 'hasOwnProperty')) {
+  if (!{}.hasOwnProperty.call(TestModule, 'hasOwnProperty')) {
 
     return;
   }
@@ -14,7 +12,7 @@ describe('hasOwnProperty function', function() {
 
     // Make an object
     var object = {a: 0};
-    expect(module.hasOwnProperty(object, 'a')).toBe(true);
+    expect(TestModule.hasOwnProperty(object, 'a')).toBe(true);
   });
 
   it('returns false for inherited and undefined properties', function() {
@@ -27,8 +25,8 @@ describe('hasOwnProperty function', function() {
     // Make an instance of the class
     var object = new MyClass();
     expect(object.a).toBe(0);
-    expect(module.hasOwnProperty(object, 'a')).toBe(false);
-    expect(module.hasOwnProperty(object, 'b')).toBe(false);
+    expect(TestModule.hasOwnProperty(object, 'a')).toBe(false);
+    expect(TestModule.hasOwnProperty(object, 'b')).toBe(false);
   });
 });
 

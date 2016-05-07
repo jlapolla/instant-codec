@@ -2,10 +2,8 @@
 
 describe('multiInheritClass function', function() {
 
-  var module = InstantCodec;
-
   // Skip test if multiInheritClass is not exposed
-  if (!module.multiInheritClass) {
+  if (!TestModule.multiInheritClass) {
 
     return;
   }
@@ -43,8 +41,8 @@ describe('multiInheritClass function', function() {
       Talker.call(this);
     }
 
-    module.extendClass(Walker, WalkerAndTalker);
-    module.multiInheritClass(Talker, WalkerAndTalker);
+    TestModule.extendClass(Walker, WalkerAndTalker);
+    TestModule.multiInheritClass(Talker, WalkerAndTalker);
     WalkerAndTalker.prototype.walkAndTalk = function() {
 
       return this.walk() + ' and ' + this.talk();
@@ -86,7 +84,7 @@ describe('multiInheritClass function', function() {
       this._myWalk = 'I walk the walk';
     }
 
-    module.extendClass(Mover, Walker);
+    TestModule.extendClass(Mover, Walker);
     Walker.prototype.walk = function() {
 
       return this._myWalk;
@@ -111,8 +109,8 @@ describe('multiInheritClass function', function() {
       Walker.call(this);
     }
 
-    module.extendClass(Talker, WalkerAndTalker);
-    module.multiInheritClass(Walker, WalkerAndTalker);
+    TestModule.extendClass(Talker, WalkerAndTalker);
+    TestModule.multiInheritClass(Walker, WalkerAndTalker);
     WalkerAndTalker.prototype.walkAndTalk = function() {
 
       return this.walk() + ' and ' + this.talk();

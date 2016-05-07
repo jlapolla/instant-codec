@@ -16,7 +16,8 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'dist/instant-codec.js',
-      'spec/*.js',
+      'partials/production-test-start.js',
+      'spec/**/*.js',
     ],
 
 

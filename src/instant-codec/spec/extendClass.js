@@ -2,10 +2,8 @@
 
 describe('extendClass function', function() {
 
-  var module = InstantCodec;
-
   // Skip test if extendClass is not exposed
-  if (!module.extendClass) {
+  if (!TestModule.extendClass) {
 
     return;
   }
@@ -31,7 +29,7 @@ describe('extendClass function', function() {
       this._myWalk = 'I walk the walk';
     }
 
-    module.extendClass(Mover, Walker);
+    TestModule.extendClass(Mover, Walker);
     Walker.prototype.walk = function() {
 
       return this._myWalk;

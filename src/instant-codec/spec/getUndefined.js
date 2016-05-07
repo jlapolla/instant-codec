@@ -2,17 +2,15 @@
 
 describe('getUndefined function', function() {
 
-  var module = InstantCodec;
-
   // Skip test if getUndefined is not exposed
-  if (!module.getUndefined) {
+  if (!TestModule.getUndefined) {
 
     return;
   }
 
   it('returns the primitive value "undefined"', function() {
 
-    expect(module.getUndefined()).toBeUndefined();
+    expect(TestModule.getUndefined()).toBeUndefined();
   });
 });
 

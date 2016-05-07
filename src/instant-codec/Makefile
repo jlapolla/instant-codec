@@ -33,10 +33,7 @@ $(d)all: $(addprefix $(d)dist/,$(addsuffix .js,instant-codec instant-codec.min))
 
 .PHONY: $(d)test-deps
 $(call helpdoc,$(d)test-deps,Build files needed for testing)
-$(d)test-deps: $(d)test/test-start.js $(addprefix $(d)test/,$(addsuffix .js,$($(d)js)))
-
-$(d)test/test-start.js: $(d)partials/test-start.js
-	mkdir -p $(d)test/ && cp $(d)partials/test-start.js $(d)test/test-start.js
+$(d)test-deps: $(d)partials/test-start.js $(d)partials/production-test-start.js $(addprefix $(d)test/,$(addsuffix .js,$($(d)js)))
 
 .PHONY: $(d)clean
 $(call helpdoc,$(d)clean,Delete build products)

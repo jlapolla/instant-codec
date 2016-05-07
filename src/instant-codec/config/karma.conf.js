@@ -15,7 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'test/test-start.js',
+      'partials/test-start.js',
       'test/extendClass.js',
       'test/getUndefined.js',
       'test/hasOwnProperty.js',

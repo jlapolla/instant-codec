@@ -3,6 +3,8 @@
   // Expose only public classes and functions on InstantCodec module
   var expose = [
     'getUndefined',
+    'hasOwnProperty',
+    'Bit',
   ];
   (function(inner, arr) {
 
@@ -10,6 +12,8 @@
 
       this[arr[i]] = inner[arr[i]];
     }
+
   }.call(this, inner, expose));
+
 }.call(this.InstantCodec, this));
 
