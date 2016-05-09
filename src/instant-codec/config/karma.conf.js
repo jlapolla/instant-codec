@@ -24,6 +24,7 @@ module.exports = function(config) {
       'test/Byte.js',
       'test/Exception.js',
       'test/TranslatorException.js',
+      'test/TranslatorOverflowException.js',
       'spec/*.js',
     ],
 
