@@ -8,7 +8,7 @@ describe('TranslatorException class', function() {
     return;
   }
 
-  it('extends the TestModule.Exception class', function() {
+  it('extends the Exception class', function() {
 
     var ex = new TestModule.TranslatorException();
 
