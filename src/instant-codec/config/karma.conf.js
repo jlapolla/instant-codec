@@ -23,6 +23,7 @@ module.exports = function(config) {
       'test/Bit.js',
       'test/Byte.js',
       'test/Exception.js',
+      'test/TranslatorException.js',
       'spec/*.js',
     ],
 

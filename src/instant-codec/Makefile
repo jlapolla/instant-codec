@@ -7,6 +7,7 @@ $(eval $(d)js += multiInheritClass)
 $(eval $(d)js += Bit)
 $(eval $(d)js += Byte)
 $(eval $(d)js += Exception)
+$(eval $(d)js += TranslatorException)
 
 # Source files wrapped in "test" partials
 define $(d)template
