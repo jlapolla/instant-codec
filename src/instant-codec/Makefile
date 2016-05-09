@@ -9,6 +9,7 @@ $(eval $(d)js += Byte)
 $(eval $(d)js += Exception)
 $(eval $(d)js += TranslatorException)
 $(eval $(d)js += TranslatorOverflowException)
+$(eval $(d)js += TranslatorUnderflowException)
 
 # Source files wrapped in "test" partials
 define $(d)template

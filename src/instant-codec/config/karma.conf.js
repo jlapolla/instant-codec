@@ -25,6 +25,7 @@ module.exports = function(config) {
       'test/Exception.js',
       'test/TranslatorException.js',
       'test/TranslatorOverflowException.js',
+      'test/TranslatorUnderflowException.js',
       'spec/*.js',
     ],
 
